@@ -1,0 +1,112 @@
+/* Page background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #4b2e2b, #c08b5c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Form card */
+.auth-card {
+  background: #fff8f2;
+  padding: 40px;
+  width: 380px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+/* Cafe name */
+.auth-card h1 {
+  margin-bottom: 5px;
+  color: #5d3629;
+}
+
+.auth-card h2 {
+  margin-top: 0;
+  font-weight: 400;
+  color: #9c6644;
+  font-size: 16px;
+}
+
+/* Labels */
+.auth-card label {
+  display: block;
+  text-align: left;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Inputs */
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 11px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #d6bfa7;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #9c6644;
+  box-shadow: 0 0 0 2px rgba(156,102,68,0.15);
+}
+
+/* Button */
+.auth-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #5d3629, #b08968);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+/* Bottom links */
+.auth-link {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: #7f5539;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* Gender group */
+.gender-group {
+  text-align: left;
+  margin-top: 8px;
+}
+/* Fix radio button layout */
+.gender-group input[type="radio"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+.gender-group label {
+  display: inline;
+  margin-right: 15px;
+}

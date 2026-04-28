@@ -1,0 +1,401 @@
+/* =====================
+   GLOBAL RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #5d3629, #d04949);
+  color: #e3be96;
+  min-height: 100vh;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.navbar a {
+  color: #f5e9dc;
+  text-decoration: none;
+  margin-left: 25px;
+  opacity: 0.8;
+}
+
+.navbar a:hover,
+.navbar .active {
+  opacity: 1;
+  color: #2772c8;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  opacity: 0.85;
+}
+
+button {
+  background: #7fd1c8;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  box-shadow: 0 0 20px rgba(127, 209, 200, 0.6);
+}
+
+/* =====================
+   HERO IMAGE ANIMATION
+===================== */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.hero-img img {
+  width: 420px;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* =====================
+   MENU PREVIEW (HOME)
+===================== */
+.menu-preview {
+  text-align: center;
+  padding: 50px;
+}
+
+.menu-preview h2 {
+  margin-bottom: 30px;
+}
+
+/* =====================
+   CARDS (HOME)
+===================== */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  width: 220px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+/* =====================
+   MENU PAGE
+===================== */
+.menu-page {
+  padding: 60px;
+  text-align: center;
+}
+
+.subtitle {
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.menu-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-12px);
+}
+
+.menu-card img {
+  width: 110px;
+  margin-bottom: 15px;
+}
+
+.menu-card span {
+  display: block;
+  margin-top: 10px;
+  color: #7fd1c8;
+  font-weight: 600;
+}
+
+/* =====================
+   CONTACT PAGE
+===================== */
+.page-header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.page-header h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #f0d7a6;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2 {
+  border-bottom: 2px solid #7fd1c8;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.map {
+  flex: 1;
+  min-width: 280px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text,
+.hero-img,
+.card,
+.menu-card,
+.contact-info,
+.map {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #5a290c;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-container {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .menu-page {
+    padding: 30px 15px;
+  }
+}
+/* Navbar layout fix */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Keep nav links in one row */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+/* Login button style */
+.login-btn {
+  background: #f44eec;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.login-btn:hover {
+  background: #6da2ec;
+}
+.about-page {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 20px;
+
+  text-align: center;   /* ✅ center text */
+}
+.about-page a {
+  display: inline-block;
+  margin-top: 25px;
+}
+.about-page h1,
+.about-page h2 {
+  margin-bottom: 20px;
+}
+.coffee-full {
+  height: 100vh;              /* full screen height */
+  width: 100%;
+  overflow: hidden;
+}
+
+.coffee-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* fill screen nicely */
+  display: block;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+}
+
+.coffee-full {
+  scroll-snap-align: start;
+}
+.coffee-full {
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.coffee-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* quote style */
+.coffee-text {
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%) translateY(60px);
+
+  color: white;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+
+ text-shadow: 0 6px 18px rgba(0,0,0,0.75); /* readability */
+
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+.coffee-text.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

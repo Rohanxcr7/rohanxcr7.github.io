@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PANENKA Coffee </title>
+  <link rel="stylesheet" href="bacacss1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <h2 class="logo">パネンカ・ブリュー ☕</h2>
+  <nav>
+    <a href="homepage.html" class="active">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="login.html" class="login-btn">Login</a>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>“Brewed, Not Rushed.”<br>Coffee Mode ON</h1>
+    <p>Strong coffee for sleepy and overthinking brains.</p>
+    <a href="menu.html"><button>View Menu</button></a>
+  </div>
+
+  <div class="hero-img">
+    <img src="coffeegirl.png" alt="Coffee">
+  </div>
+</section>
+
+<section class="coffee-full">
+  <img src="IMG_1230.JPG" alt="">
+  <div class="coffee-text">
+    “अन्तः अस्ति प्रारम्भः”<br>
+    The end is also a beginning
+  </div>
+</section>
+
+<section class="coffee-full">
+  <img src="IMG_1228.JPG" alt="">
+  <div class="coffee-text">
+    "स्वधर्मे निधनं श्रेयः"<br>
+    It is better to follow your own duty
+  </div>
+</section>
+
+<section class="coffee-full">
+  <img src="IMG_1229.JPG" alt="">
+  <div class="coffee-text">
+    "जितात्मनः प्रशान्तस्य"<br>
+    One who has conquered the mind is peaceful
+  </div>
+</section>
+
+<section class="coffee-full">
+  <img src="IMG_1226.JPG" alt="">
+  <div class="coffee-text">
+    "शीलं परमं भूषणम्"<br>
+    Character is the highest ornament.
+  </div>
+</section>
+
+<section class="coffee-full">
+  <img src="IMG_1225.JPG" alt="">
+  <div class="coffee-text">
+    "उत्तिष्ठ"<br>
+    Rise
+  </div>
+</section>
+
+<section class="coffee-full">
+  <img src="IMG_1224.JPG" alt="">
+  <div class="coffee-text">
+    
+    "जयी भव"<br>
+    Be victorious
+  </div>
+</section>
+
+<section class="coffee-full">
+  <img src="IMG_1223.JPG" alt="">
+  <div class="coffee-text">
+    "कालः सर्वं भक्षयति"<br>
+    Time consumes everything
+  </div>
+</section>
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const text = entry.target.querySelector('.coffee-text');
+
+    if (entry.isIntersecting) {
+      text.classList.add('show');   // pop ON
+    } else {
+      text.classList.remove('show'); // pop OFF
+    }
+  });
+}, { threshold: 0.6 });
+
+document.querySelectorAll('.coffee-full')
+  .forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
